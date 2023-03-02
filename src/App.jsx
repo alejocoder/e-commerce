@@ -8,6 +8,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home/Home";
 import { Product } from "./pages/product/Product";
 import { Products } from "./pages/products/Products";
+import './app.scss'
 
 const Layout = () => {
   return(
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout/>,
     children:[
+      {
+        path: '/',
+        element: <Home/>
+      },
       {
         path: '/products/:id',
         element: <Products/>
